@@ -1,7 +1,7 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+const url='https://cattleback.onrender.com'
 const initialState = {
   user: {},
   isLoading: false,
@@ -11,7 +11,7 @@ const initialState = {
 export const login = createAsyncThunk(
   'auth/login',
   async ({ email, password }) => {
-    const response = await axios.post('http://localhost:3001/login', { email, password }); 
+    const response = await axios.post(`${url}/login`, { email, password }); 
     console.log(response.data)
     return response.data;
   }
@@ -20,7 +20,7 @@ export const login = createAsyncThunk(
 export const signup = createAsyncThunk(
   'auth/signup',
   async ({ email, password}) => {
-    const response = await axios.post('http://localhost:3001/signup', { email, password });
+    const response = await axios.post(`${url}/signup`, { email, password });
     return response.data;
   }
 );
