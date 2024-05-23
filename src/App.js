@@ -5,13 +5,14 @@ import Login from '../src/components/login'
 import Signup from '../src/components/signup' 
 import Navbar from "../src/components/Nav"; 
 import Userhome from '../src/components/user'
-import AdminHome from "../src/components/admin";
+import AdminHome from "../src/components/admin"; 
+import Logout from '../src/components/logout'
 function App() {
   return (<BrowserRouter>
 <Navbar/>
 <Routes> 
 <Route exact path='/' element={<Home/>}/>
-
+<Route exact path='/' element={<Logout/>}/>
 <Route exact path='/login' element={<Login/>}/> 
 
 <Route exact path='/signup' element={<Signup/>}/>   
