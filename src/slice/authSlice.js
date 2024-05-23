@@ -1,8 +1,8 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-//const url='https://cattleback.onrender.com' 
-const url='http://localhost:3001'
+const url='https://cattleback.onrender.com' 
+//const url='http://localhost:3001'
 const initialState = {
   user: {role:'home',isAuth:false},
   isLoading: false,
